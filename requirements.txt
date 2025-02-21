@@ -1,0 +1,5 @@
+nltk
+SpeechRecognition
+pyttsx3
+scikit-learn
+pyaudio 
