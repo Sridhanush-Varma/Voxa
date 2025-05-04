@@ -1,0 +1,9 @@
+nltk
+SpeechRecognition
+pyttsx3
+scikit-learn
+pyaudio
+requests
+beautifulsoup4
+google-api-python-client
+textblob
