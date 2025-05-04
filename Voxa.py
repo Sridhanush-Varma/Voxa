@@ -14,6 +14,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from textblob import TextBlob
 from googleapiclient.discovery import build
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
 
 # Download required NLTK data
 nltk.download('punkt')
@@ -27,12 +28,15 @@ class SmartChatBot:
         self.recognizer = sr.Recognizer()
         self.engine = pyttsx3.init()
 
+        # Load environment variables from .env file
+        load_dotenv()
+
         # Weather API configuration
-        self.weather_api_key = "292c06d6befbb0f88367adefb2bbca2e"  # Replace with your actual API key
+        self.weather_api_key = os.getenv("WEATHER_API_KEY", "YOUR_OPENWEATHERMAP_API_KEY")
 
         # Google Search API configuration
-        self.search_api_key = "AIzaSyA_zItcvgikJqOQZWJ2BIPqlh210sxx6vc"  # Replace with your actual API key
-        self.search_engine_id = "d3845d08da67e43d0"  # Replace with your actual Search Engine ID
+        self.search_api_key = os.getenv("GOOGLE_SEARCH_API_KEY", "YOUR_GOOGLE_API_KEY")
+        self.search_engine_id = os.getenv("SEARCH_ENGINE_ID", "YOUR_SEARCH_ENGINE_ID")
 
         # Flag to determine if APIs are available
         self.apis_available = self.check_api_availability()

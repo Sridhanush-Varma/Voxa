@@ -27,6 +27,7 @@ requests
 beautifulsoup4
 google-api-python-client
 textblob
+python-dotenv
 ```
 
 ## Installation
@@ -37,16 +38,18 @@ textblob
    pip install -r requirements.txt
    ```
 3. The first run will download necessary NLTK data automatically
-4. Replace the API keys in chatbot.py:
-   - Replace `YOUR_OPENWEATHERMAP_API_KEY` with your OpenWeatherMap API key
-   - Replace `YOUR_GOOGLE_API_KEY` with your Google API key
-   - Replace `YOUR_SEARCH_ENGINE_ID` with your Google Custom Search Engine ID
+4. Create a `.env` file in the root directory with your API keys:
+   ```
+   WEATHER_API_KEY=your_openweathermap_api_key
+   GOOGLE_SEARCH_API_KEY=your_google_api_key
+   SEARCH_ENGINE_ID=your_search_engine_id
+   ```
 
 ## Usage
 
 Run the chatbot:
 ```bash
-python chatbot/chatbot.py
+python Voxa.py
 ```
 
 The chatbot will:
@@ -68,10 +71,12 @@ The chatbot will:
 ## Project Structure
 
 ```
-Chatbot/
-├── chatbot.py         # Main chatbot implementation
+Voxa/
+├── Voxa.py            # Main chatbot implementation
 ├── knowledge_base.json # Extended knowledge base with facts and Q&A pairs
-└── requirements.txt   # Project dependencies
+├── requirements.txt   # Project dependencies
+├── .env               # Environment variables for API keys (not tracked by git)
+└── .gitignore         # Git ignore file to exclude sensitive information
 ```
 
 ## Technical Details
