@@ -105,3 +105,11 @@ Voxa/
 - Implement machine learning for continuous improvement
 - Add user authentication and personalization
 - Develop a graphical user interface
+
+##  Attribution Requirement
+
+If you use this project in any form (website, app, service, or derivative code), you **must** include the following attribution in your documentation, website footer, or credits page:
+
+> Created by Sridhanush Varma – [https://github.com/Sridhanush-Varma/Voxa](https://github.com/Sridhanush-Varma/Voxa)
+
+Thank you for respecting the work that went into this project! 💻✨
