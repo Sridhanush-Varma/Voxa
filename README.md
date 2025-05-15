@@ -113,3 +113,6 @@ If you use this project in any form (website, app, service, or derivative code),
 > Created by Sridhanush Varma – [https://github.com/Sridhanush-Varma/Voxa](https://github.com/Sridhanush-Varma/Voxa)
 
 Thank you for respecting the work that went into this project! 💻✨
+
+##  License
+This project is licensed under the MIT License - see the LICENSE file for details
